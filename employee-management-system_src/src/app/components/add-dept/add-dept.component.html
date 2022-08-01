@@ -1,0 +1,41 @@
+<div class="container col-md-6" style="margin-top:30px">
+    <h3>Department Details</h3>
+    <hr>
+    <form #deptForm="ngForm" novalidate class="form" (ngSubmit)="addDepartment()">
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="col-form-label">Dept ID</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" min="0" class="form-control" id="deptno" name="deptno" [(ngModel)]="dept.deptno"/>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="col-form-label">Dept Name</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="deptname" name="deptname" [(ngModel)]="dept.deptname"/>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="col-form-label">Dept Location</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="location" name="location" [(ngModel)]="dept.location"/>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row justify-content-center">
+            <div class="col-sm-2">
+                <input type="submit" value="Submit" name="submit" class="btn btn-primary">
+            </div>
+            <div class="col-sm-2">
+                <input type="reset" value="Reset" name="reset" class="btn btn-secondary">
+            </div>
+        </div>
+    </form>
+</div>
